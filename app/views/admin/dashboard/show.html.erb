@@ -1,2 +1,19 @@
 <h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+
+<div class="jumbotron">
+  <h1 class="display-4">Products in Admin</h1>
+  <p class="lead"></p>
+  <hr class="my-4">
+  <p>Total: <%=@count_products%></p>
+  <a class="btn btn-primary btn-lg" href="/admin/products" role="button">View</a>
+</div>
+
+<div class="jumbotron">
+  <h1 class="display-4">Categories in Production</h1>
+  <p class="lead"></p>
+  <hr class="my-4">
+  <p>Total: <%=@count_categories%></p>
+  <%@categories.each do |category|%>
+    <a class="btn btn-primary btn-lg" href="/categories/<%=category.id%>" role="button">View <%=category.name%></a>   
+  <% end %>
+</div>
