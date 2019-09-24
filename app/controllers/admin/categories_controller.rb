@@ -19,7 +19,6 @@ class Admin::CategoriesController < ApplicationController
       render :new
     end
     
-    raise @category.inspect
   end
 
   private
