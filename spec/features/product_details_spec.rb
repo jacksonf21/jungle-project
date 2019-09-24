@@ -15,7 +15,7 @@ RSpec.feature "Visitor navigates from home page to product details ", type: :fea
     end
   end
 
-  scenario "" do
+  scenario "User sees product details" do
     visit root_path
 
     find('.product .pull-right').click
